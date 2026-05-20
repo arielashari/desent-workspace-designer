@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-sand: #f5f0e8;
+  --color-sand-light: #fdfaf6;
+  --color-sand-dark: #e8ddd0;
+  --color-terracotta: #c85a3a;
+  --color-teal: #2d7a7a;
+  --color-bark: #2a1f14;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes checkoutSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scene-item-enter {
+  animation: fadeIn 0.28s ease-out;
+}
+
+.checkout-slide-up {
+  animation: checkoutSlideUp 0.3s ease-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
