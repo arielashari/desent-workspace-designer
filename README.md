@@ -1,29 +1,42 @@
-# Create T3 App
+# monis.rent — Workspace Designer
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Interactive workspace configurator for [monis.rent](https://monis.rent), a Bali-based office equipment rental service. Pick your desk, chair, accessories, and add-on zones — see a live visual preview, then submit your rental request.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Live CSS preview** — desk scene updates in real-time as you configure
+- **Desks** — Electric Standing Desk / Mechanical Standing Desk
+- **Chairs** — Ergonomic Office Chair / Basic Office Chair
+- **Accessories** — monitors (24" FHD, 27" 4K), keyboard, mouse, lamp, plant
+- **Zones** — Coffee Station, Relax Zone, Fitness Corner, Outdoor Bali (rendered in the scene)
+- **Checkout modal** — duration selector (1wk–3mo) with tiered discounts, contact form
+- **Weekly pricing** — all prices in $/wk
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Stack
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
+- [Next.js 15](https://nextjs.org) — App Router
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [tRPC v11](https://trpc.io)
 - [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- [Bun](https://bun.sh)
 
-## Learn More
+## Getting Started
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+```bash
+bun install
+cp .env.example .env
+bun dev
+```
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Open [http://localhost:3000](http://localhost:3000).
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Commands
 
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+```bash
+bun dev           # dev server (Turbopack)
+bun build         # production build
+bun typecheck     # tsc --noEmit
+bun lint          # ESLint
+bun check         # lint + typecheck
+bun format:write  # Prettier
+```
